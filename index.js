@@ -5,14 +5,14 @@ import random from "random";
 
 const path = "./data.json";
 
-// 🔁 New date range: 15 Jan 2018 → 1 July 2025
-const START_DATE = moment("2018-01-8");
-const END_DATE = moment("2025-07-01");
+// 🔁 New date range: 1 Jan 2020 → 30 July 2025
+const START_DATE = moment("2020-01-01");
+const END_DATE = moment("2025-07-30");
 
 const makeCommits = (n) => {
   if (n === 0) return simpleGit().push();
 
-  const x = random.int(0, 388); // ~388 weeks total
+  const x = random.int(0, 344); // ~344 weeks from Jan 2020 to July 2025
   const y = random.int(0, 6);   // 0 to 6 days
 
   const date = START_DATE.clone().add(x, "w").add(y, "d");
