@@ -33,3 +33,4 @@ const makeCommits = (n) => {
 
 // 🟢 Number of commits (increase to fill contribution graph)
 makeCommits(1000);
+ 
